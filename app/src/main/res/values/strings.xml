@@ -17,7 +17,7 @@
 
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <string name="app_name">Materialistic</string>
+    <string name="app_name">Hackerino</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_list">Top Stories</string>
     <string name="title_activity_best">Best Stories</string>
@@ -321,5 +321,6 @@
     <string name="share_file">Share file</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="notification_channel_downloads">Downloads</string>
+    <string name="share_text">Share link</string>
 
 </resources>

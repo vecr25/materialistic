@@ -8,7 +8,7 @@ android {
     defaultConfig {
         applicationId "io.github.hidroh.materialistic"
         minSdkVersion 14
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 79
         versionName "3.3"
         buildConfigField "int", "LATEST_RELEASE", "77"
@@ -20,12 +20,24 @@ android {
                 'proguard-support.pro',
                 'proguard-rx.pro'
         resConfigs "en", "zh-rCN", "es"
+        signingConfig signingConfigs.BrokenLemon
+    }
+    flavorDimensions "version"
+    productFlavors {
+        MainApp {
+            applicationId = "io.github.hidroh.materialistic"
+            dimension "version"
+        }
+        Hackerino {
+            dimension "version"
+            applicationId = "com.brokenlemon.hackerino"
+        }
     }
 
     buildTypes {
         debug {
+            debuggable true
             minifyEnabled !rootProject.ext.ci
-            useProguard false
         }
         release {
             minifyEnabled true
